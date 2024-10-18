@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onClick="changecolor()">Change</button>
+    <input id="colors" type="text" />
+    <p id="error"></p>
+</body>
+<script>
+function changecolor() {
+    var colore = document.getElementById("colors").value;
+  
+    document.getElementById("error").innerHTML=""; // remove existing error
+  
+    if (colore === "yellow") {
+      document.body.style.backgroundColor = "yellow";
+    } else if (colore === "blue") {
+      document.body.style.backgroundColor = "blue";
+    } else if (colore === "green") {
+      document.body.style.backgroundColor = "green";
+    } else if (colore === "black") {
+      document.body.style.backgroundColor = "black";
+    } else {
+      document.getElementById("error").innerHTML =
+        "Enter a Valid Color";
+    }
+  }
+</script>
+</html>
